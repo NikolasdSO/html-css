@@ -13,9 +13,10 @@
         }
 
         table {
-            width: 500px;
+            width: 500px;        
             border-collapse: collapse;
             border: 5px solid red;
+            height: 500px;
         }
 
         tr {
@@ -25,6 +26,12 @@
         td {
             border: 1px solid black;
             padding: 8px;
+            text-align: center; /*Alinhamento horizontal*/
+            vertical-align: top;
+        }
+
+        .numero {
+            text-align: right;
         }
     </style>
 </head>
@@ -45,12 +52,12 @@
         <tr> <!--SEGUNDA LINHA-->
             <td>A2</td>
             <td>B2</td>
-            <td>C2</td>
+            <td class="numero">C2</td>
         </tr>
         <tr> <!--TERCEIRA LINHA-->
             <td>A3</td>
             <td>B3</td>
-            <td>C3</td>
+            <td class="numero">C3</td>
         </tr>
         <tr> <!--TERCEIRA LINHA-->
             <td>A4</td>
