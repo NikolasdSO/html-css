@@ -16,17 +16,28 @@
             border-collapse: collapse;
         }
 
+        caption {
+            font-size: 2em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
         td, th {
             border: 1px solid black;
             padding: 10px;
         }
 
         thead, tfoot {
-            background-color: gray;
+            background-color: rgb(65, 65, 65);
         }
 
         td.num {
             text-align: right;
+        }
+
+        tbody tr:nth-child(2n-) /*odd=impar e funciona tbm, even = par 2n-1*/ {
+            background-color: lightgray;
         }
     </style>
 </head>
@@ -35,6 +46,7 @@
     <!--
         ANATOMIA PARA TABELAS GRANDES
         TABLE
+            CAPTION (LEGENDA)
             THEAD
                 TR, TD, TH
             TBODY
@@ -45,10 +57,11 @@
     -->
 
     <table>
+        <caption>População das unidades federativas</caption>
         <thead>
             <tr>
-               <th>Estado</th> 
-               <th>População</th>
+               <th scope="col">Estado</th> 
+               <th scope="col">População</th>
             </tr>
         </thead>
         <tbody>
@@ -199,7 +212,7 @@
         </tbody>
         <tfoot>
             <tr> 
-                <th>Tota lde habitantes</th>
+                <th scope="row">Tota lde habitantes</th>
                 <td><strong>> 1</strong></td>
             </tr>
         </tfoot>
